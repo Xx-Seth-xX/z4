@@ -330,6 +330,7 @@ pub fn main() !u8 {
 
     Game.board_texture = createBoardTexture();
     defer ray.UnloadTexture(Game.board_texture.texture);
+    ray.SetTargetFPS(30);
 
     Game.current_player = .P1;
     Game.state = .Running;
